@@ -1,5 +1,3 @@
-## Requirements
-
-Run with
+Run with:
 
 webpack-dev-server
