@@ -40,15 +40,16 @@ body {
     width: 90%;
   }
 }
-
+/*
 .quote-img {
   height: 350px;
-  object-fit: cover;
   border-radius: 8px;
-  width: 88%;
   margin: 4% 6%;
   box-shadow: rgb(0 0 0 / 89%) 0px 1px 8px;
-}
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+} */
 
 .container-top {
   background-color: #e9e9e9d6;
@@ -65,13 +66,94 @@ body {
   margin: 2.5% 0
 }
 
+.carousel {
+  position:relative;
+  height: 600px;
+  /* width: 80%; */
+  margin: 0 auto;
+  width: 88%;
+  height: 88%;
+  padding-top: 4%
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgb(126 126 126 / 89%) 0px 1px 3px
+}
+
+.carousel-container {
+  height: 50%;
+  position: relative;
+}
+
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  height: 200px;
+  transform: translateY(-50%);
+  border: 0;
+  right: -50px;
+  cursor: pointer;
+}
+
+.carousel-btn p {
+  font-size: 50px;
+}
+
 .icons-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%
+}
+
+.cat-btn img {
+  width: 150px;
+  height: 150px;
+}
+/*
+.carousel {
+  padding: 0;
+  margin: 0;
+  position: relative;
+} */
+/*
+.carousel ul {
+  list-style-type: none;
+  transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+  position:absolute;
+  width: 88%;
+} */
+
+/* .icons-flex {
   display: flex;
   justify-content: space-between;
   width: 70%;
   margin: 0 auto;
-}
-
+} */
+/*
 .icons-flex p {
   text-align: center;
   font-size: 18px;
@@ -90,8 +172,8 @@ body {
 .cat-btn img {
   width: 150px;
   height: 150px
-}
-
+} */
+/*
 .btn-next {
   font-size: 50px;
   background: gray;
@@ -105,10 +187,11 @@ body {
   padding-bottom: 0%;
   text-decoration: none;
   box-shadow:rgb(0 0 0 / 89%) 0px 1px 8px;
+  position:absolute
 }
 
 .btn-next p {
   padding: 0;
   margin: 0;
   line-height: 55px;
-}
+} */
