@@ -11,7 +11,7 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
-button.addEventListener('click', event => {
+const handleCarousel = () => {
   const currentSlide = track.querySelector('.current-slide');
 
   const nextSlide = currentSlide.nextElementSibling;
@@ -30,25 +30,15 @@ button.addEventListener('click', event => {
       })
     }, "600")
   }
-})
+}
 
+
+button.addEventListener('click', event => {
+  handleCarousel();
+})
 
 catButtons.forEach((catBtn) => {
   catBtn.addEventListener('click', event => {
-    const currentSlide = track.querySelector('.current-slide');
-
-    const nextSlide = currentSlide.nextElementSibling;
-    const amountToMove = nextSlide.style.left;
-
-    track.style.transform = 'translateX(-' + amountToMove + ')';
-
-    currentSlide.classList.remove('current-slide');
-    nextSlide.classList.add('current-slide');
-    if (nextSlide === slides[slides.length-1]) {
-      button.disabled = true;
-      catButtons.forEach((btn) => {
-        btn.disabled = true;
-      })
-    }
+    handleCarousel();
   })
 })
